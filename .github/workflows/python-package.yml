@@ -5,9 +5,9 @@ name: Python package
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -41,7 +41,7 @@ jobs:
 
   publish:
     needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     runs-on: ubuntu-latest
 
